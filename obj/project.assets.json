@@ -4612,11 +4612,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\Practice\\api\\api\\api.csproj",
+      "projectUniqueName": "D:\\ASP.NET\\learn-ASP.NET-Core-Web-API\\api.csproj",
       "projectName": "api",
-      "projectPath": "D:\\C#\\Practice\\api\\api\\api.csproj",
+      "projectPath": "D:\\ASP.NET\\learn-ASP.NET-Core-Web-API\\api.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\Practice\\api\\api\\obj\\",
+      "outputPath": "D:\\ASP.NET\\learn-ASP.NET-Core-Web-API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
