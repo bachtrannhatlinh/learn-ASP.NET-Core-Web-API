@@ -10,18 +10,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Repository
 {
-    public class StockRepository : IStockRepository
+  public class StockRepository : IStockRepository
+  {
+    private readonly ApplicationDBContext _context;
+
+    public StockRepository(ApplicationDBContext context)
     {
-      private readonly ApplicationDBContext _context;
-
-      public StockRepository(ApplicationDBContext context, IStockRepository stockRepository)
-      {
-        _context = context;
-      }
-
-      public Task<List<Stock>> GetAllAsync()
-      {
-        return _context.Stocks.ToListAsync();
-      }
+      _context = context;
     }
+
+    public Task<List<Stock>> GetAllAsync()
+    {
+      return _context.Stocks.ToListAsync();
+    }
+  }
 }

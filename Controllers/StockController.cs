@@ -57,21 +57,21 @@ namespace api.Controllers
 
     [HttpPut]
     [Route("{id}")]
-    public async Task<IActionResult> Update([FromRoute] int id , [FromBody] UpdateStockRequestDto updateDto)
+    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateStockRequestDto updateDto)
     {
       var stockModel = await _context.Stocks.FirstOrDefaultAsync(x => x.Id == id);
 
-      if(stockModel == null)
+      if (stockModel == null)
       {
         return NotFound();
       }
 
       stockModel.Symbol = updateDto.Symbol;
-      stockModel.CompanyName= updateDto.CompanyName;
-      stockModel.Purchase= updateDto.Purchase;
-      stockModel.LastDiv= updateDto.LastDiv;
-      stockModel.Industry= updateDto.Industry;
-      stockModel.MarketCap= updateDto.MarketCap;
+      stockModel.CompanyName = updateDto.CompanyName;
+      stockModel.Purchase = updateDto.Purchase;
+      stockModel.LastDiv = updateDto.LastDiv;
+      stockModel.Industry = updateDto.Industry;
+      stockModel.MarketCap = updateDto.MarketCap;
 
       await _context.SaveChangesAsync();
 
@@ -84,7 +84,7 @@ namespace api.Controllers
     {
       var stockModel = await _context.Stocks.FirstOrDefaultAsync(x => x.Id == id);
 
-      if(stockModel == null)
+      if (stockModel == null)
       {
         return NotFound();
       }
